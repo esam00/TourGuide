@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Tour Guide Alex</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  main Categories  -->
+    <string name="places">Places</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="hotels">Hotels</string>
+
+    <!-- Places category -->
+    <string name="qaitbey">Fort Qaitbey</string>
+    <string name="historic">#Historic Sites</string>
+
+    <!-- short description about places  -->
+    <string name="about_qaitbey">The Qaitbay Citadel in Alexandria is considered one of the most
+        important defensive strongholds, not only in Egypt, but also along the Mediterranean Sea
+        coast. It formulated an important part of the fortification system of Alexandria in the
+        15th century
+    The Qaitbay Citadel in Alexandria is considered one of the most
+        important defensive strongholds, not only in Egypt, but also along the Mediterranean Sea
+        coast. It formulated an important part of the fortification system of Alexandria in the
+        15th century
+    The Qaitbay Citadel in Alexandria is considered one of the most
+        important defensive strongholds, not only in Egypt, but also along the Mediterranean Sea
+        coast. It formulated an important part of the fortification system of Alexandria in the
+        15th century
+    The Qaitbay Citadel in Alexandria is considered one of the most
+        important defensive strongholds, not only in Egypt, but also along the Mediterranean Sea
+        coast. It formulated an important part of the fortification system of Alexandria in the
+        15th century
+    The Qaitbay Citadel in Alexandria is considered one of the most
+        important defensive strongholds, not only in Egypt, but also along the Mediterranean Sea
+        coast. It formulated an important part of the fortification system of Alexandria in the
+        15th century
+    The Qaitbay Citadel in Alexandria is considered one of the most
+        important defensive strongholds, not only in Egypt, but also along the Mediterranean Sea
+        coast. It formulated an important part of the fortification system of Alexandria in the
+        15th century
+    The Qaitbay Citadel in Alexandria is considered one of the most
+        important defensive strongholds, not only in Egypt, but also along the Mediterranean Sea
+        coast. It formulated an important part of the fortification system of Alexandria in the
+        15th century</string>
+
+    <!-- opening and closing time   -->
+    <string name="qaitbey_opening">8:00 Am - 4:00 pm </string>
+
+    <!-- Phone Numbers    -->
+    <string name="qaitbey_number">+20 122 244 5141 </string>
+
+    <string name="about">About</string>
+
+</resources>
