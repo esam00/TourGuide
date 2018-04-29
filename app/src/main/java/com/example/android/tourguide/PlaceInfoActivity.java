@@ -1,13 +1,16 @@
 package com.example.android.tourguide;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class PlaceInfoActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,23 @@ public class PlaceInfoActivity extends AppCompatActivity {
 
         TextView phoneNumber = findViewById(R.id.phone_number);
         phoneNumber.setText(place.getPhoneNumberResourceId());
+
+        TextView location = findViewById(R.id.location);
+        String latitude = getString(place.getLatitudeResourceId());
+        String longitude = getString(place.getLongitudeResourceId());
+
+        String geoURI = String.format("geo:", latitude, longitude);
+        final Uri uri = Uri.parse(geoURI);
+
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Creates an Intent that will load a map of San Francisco
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, uri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+            }
+        });
 
     }
 }

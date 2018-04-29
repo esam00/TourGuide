@@ -21,32 +21,34 @@ public class Place implements Parcelable{
     private int mDescriptionResourceId;
     private int mOpeningResourceId;
     private int mPhoneNumberResourceId;
+    private int mLatitudeResourceId;
+    private int mLongitudeResourceId;
 
     /**
      * constructor
      */
     public Place(int placeName , int placeCategory, int imageResourceId,
-            int descriptionResourceId, int openingResourceId ,int phoneNumberResourceId ){
+            int descriptionResourceId, int openingResourceId ,int phoneNumberResourceId
+            ,int latitudeResourceId,int longitudeResourceId ){
        mPlaceNameResourceId = placeName;
        mPlaceCategoryResourceId = placeCategory;
        mImageResourceId = imageResourceId ;
        mDescriptionResourceId = descriptionResourceId;
        mOpeningResourceId = openingResourceId ;
        mPhoneNumberResourceId = phoneNumberResourceId;
-
-
+       mLatitudeResourceId = latitudeResourceId ;
+       mLongitudeResourceId =longitudeResourceId;
     }
+
     /**
      * and those methods to get back the values of the current position object
      */
     public int getPlaceNameResourceId(){
         return mPlaceNameResourceId;
     }
-
     public int getPlaceCategoryResourceId(){
         return mPlaceCategoryResourceId;
     }
-
     public  int getDescriptionResourceId(){
         return mDescriptionResourceId;
     }
@@ -59,6 +61,13 @@ public class Place implements Parcelable{
     public  int getImageResourceId(){
         return mImageResourceId;
     }
+    public  int getLatitudeResourceId(){
+        return mLatitudeResourceId;
+    }
+    public  int getLongitudeResourceId(){
+        return mLongitudeResourceId;
+    }
+
 
     //write object values to parcel for storage
     public void writeToParcel(Parcel dest, int flags){
@@ -69,7 +78,8 @@ public class Place implements Parcelable{
         dest.writeInt(mDescriptionResourceId);
         dest.writeInt(mOpeningResourceId);
         dest.writeInt(mPhoneNumberResourceId);
-
+        dest.writeInt(mLatitudeResourceId);
+        dest.writeInt(mLongitudeResourceId);
     }
 
     //constructor used for parcel
@@ -81,6 +91,8 @@ public class Place implements Parcelable{
         mDescriptionResourceId = parcel.readInt();
         mOpeningResourceId = parcel.readInt();
         mPhoneNumberResourceId = parcel.readInt();
+        mLatitudeResourceId = parcel.readInt();
+        mLongitudeResourceId = parcel.readInt();
     }
 
     //creator - used when un-parceling our parcle (creating the object)

@@ -67,7 +67,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
 
             nameTextView =  itemView.findViewById(R.id.place_name_text_view);
             categoryTextView = itemView.findViewById(R.id.place_category_text_view);
-            placeImage = itemView.findViewById(R.id.place_image);
+            placeImage = itemView.findViewById(R.id.image);
             openingTextView = itemView.findViewById(R.id.opening_time_text_view);
 
             // Setup the click listener

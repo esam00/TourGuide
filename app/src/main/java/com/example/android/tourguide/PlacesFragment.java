@@ -4,6 +4,7 @@ package com.example.android.tourguide;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -34,19 +35,41 @@ public class PlacesFragment extends Fragment {
         // Create a list of places
         final List<Place> places = new ArrayList<>();
         places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening,R.string.qaitbey_number));
+                ,R.string.about_qaitbey,R.string.qaitbey_opening
+                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
         places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening,R.string.qaitbey_number));
+                ,R.string.about_qaitbey,R.string.qaitbey_opening
+                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
         places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening,R.string.qaitbey_number));
+                ,R.string.about_qaitbey,R.string.qaitbey_opening
+                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
         places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening,R.string.qaitbey_number));
+                ,R.string.about_qaitbey,R.string.qaitbey_opening
+                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
         places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening,R.string.qaitbey_number));
+                ,R.string.about_qaitbey,R.string.qaitbey_opening
+                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
         places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening,R.string.qaitbey_number));
+                ,R.string.about_qaitbey,R.string.qaitbey_opening
+                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
         places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening,R.string.qaitbey_number));
+                ,R.string.about_qaitbey,R.string.qaitbey_opening
+                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
+        places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
+                ,R.string.about_qaitbey,R.string.qaitbey_opening
+                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
+        places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
+                ,R.string.about_qaitbey,R.string.qaitbey_opening
+                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
+        places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
+                ,R.string.about_qaitbey,R.string.qaitbey_opening
+                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
+        places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
+                ,R.string.about_qaitbey,R.string.qaitbey_opening
+                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
+        places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
+                ,R.string.about_qaitbey,R.string.qaitbey_opening
+                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
 
         // Find the {@link RecyclerView} object in the view hierarchy of the {@link Activity}.
         RecyclerView recyclerView = rootView.findViewById(R.id.list);
@@ -54,6 +77,7 @@ public class PlacesFragment extends Fragment {
         // Create an {@link PlaceAdapter}, whose data source is a list of {@link Place}s. The
         // adapter knows how to create list items for each item in the list.
         PlaceAdapter adapter = new PlaceAdapter(getContext(),places);
+
         LinearLayoutManager linearLayoutManager =new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(linearLayoutManager);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -61,6 +85,12 @@ public class PlacesFragment extends Fragment {
         // Make the {@link RecycleView} use the {@link PlaceAdapter} we created above, so that the
         // {@link RecycleView} will display list items for each {@link Place} in the list.
         recyclerView.setAdapter(adapter);
+
+        DividerItemDecoration mDividerItemDecoration = new DividerItemDecoration(
+                recyclerView.getContext(),
+                linearLayoutManager.getOrientation()
+        );
+        recyclerView.addItemDecoration(mDividerItemDecoration);
 
         adapter.setOnItemClickListener(new PlaceAdapter.OnItemClickListener() {
             @Override

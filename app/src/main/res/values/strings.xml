@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tour Guide Alex</string>
+    <string name="app_name">TourGuide</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -9,8 +9,10 @@
     <string name="restaurants">Restaurants</string>
     <string name="hotels">Hotels</string>
 
-    <!-- Places category -->
+    <!-- Places -->
     <string name="qaitbey">Fort Qaitbey</string>
+
+    <!-- category -->
     <string name="historic">#Historic Sites</string>
 
     <!-- short description about places  -->
@@ -48,6 +50,12 @@
 
     <!-- Phone Numbers    -->
     <string name="qaitbey_number">+20 122 244 5141 </string>
+
+    <!-- locations -->
+    <string name="qaitbey_lat">31.214011</string>
+    <string name="qaitbey_long">29.885638</string>
+
+
 
     <string name="about">About</string>
 

@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
 
         // Give the TabLayout the ViewPager
-        TabLayout tabLayout = findViewById(R.id.sliding_tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
     }
