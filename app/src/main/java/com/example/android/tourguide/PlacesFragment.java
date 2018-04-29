@@ -82,7 +82,7 @@ public class PlacesFragment extends Fragment {
         recyclerView.setLayoutManager(linearLayoutManager);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
-        // Make the {@link RecycleView} use the {@link PlaceAdapter} we created above, so that the
+        // Make  the {@link RecycleView} use the {@link PlaceAdapter} we created above, so that the
         // {@link RecycleView} will display list items for each {@link Place} in the list.
         recyclerView.setAdapter(adapter);
 
