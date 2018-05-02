@@ -27,22 +27,23 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
     Context mContext;
 
     // Pass in the contact array into the constructor
-    public PlaceAdapter(Context context,List<Place> places) {
+    public PlaceAdapter(Context context, List<Place> places) {
 
         this.mPlaces = places;
         this.mContext = context;
     }
 
 
-
     /***** Creating OnItemClickListener *****/
 
     // Define listener member variable
     private OnItemClickListener listener;
+
     // Define the listener interface
     public interface OnItemClickListener {
         void onItemClick(View itemView, int position);
     }
+
     // Define the method that allows the parent activity or fragment to define the listener
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.listener = listener;
@@ -56,7 +57,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
         public TextView nameTextView;
         public TextView categoryTextView;
         public TextView openingTextView;
-        public ImageView placeImage ;
+        public ImageView placeImage;
 
         // We also create a constructor that accepts the entire item row
         // and does the view lookups to find each subview
@@ -65,7 +66,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
             // to access the context from any ViewHolder instance.
             super(itemView);
 
-            nameTextView =  itemView.findViewById(R.id.place_name_text_view);
+            nameTextView = itemView.findViewById(R.id.place_name_text_view);
             categoryTextView = itemView.findViewById(R.id.place_category_text_view);
             placeImage = itemView.findViewById(R.id.image);
             openingTextView = itemView.findViewById(R.id.opening_time_text_view);
@@ -122,7 +123,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
     // Returns the total count of items in the list
     @Override
     public int getItemCount() {
-       return mPlaces.size();
+        return mPlaces.size();
     }
 
 }

@@ -2,4 +2,21 @@
 <resources>
     <!-- Height of each list item -->
     <dimen name="list_item_height">88dp</dimen>
+
+    <!-- Main Activity dimens -->
+    <dimen name="appBar_height">148dp</dimen>
+    <dimen name="tab_indicator_height">5dp</dimen>
+    <dimen name="textView_padding">14dp</dimen>
+
+    <!-- PlaceInfo Activity  dimens -->
+    <dimen name="description_textView_padding">14dp</dimen>
+    <dimen name="appBarLayout_height">300dp</dimen>
+    <dimen name="expanded_title_margin_end">58dp</dimen>
+    <dimen name="expanded_title_margin_start">48dp</dimen>
+    <dimen name="category_TextView_margin">5dp</dimen>
+    <dimen name="category_TextView_padding">10dp</dimen>
+    <dimen name="about_TextView_margin">12dp</dimen>
+    <dimen name="icon_padding_right">24dp</dimen>
+    <dimen name="information_linearLayout_padding">10dp</dimen>
+
 </resources>

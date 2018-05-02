@@ -36,40 +36,25 @@ public class PlacesFragment extends Fragment {
         final List<Place> places = new ArrayList<>();
         places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
                 ,R.string.about_qaitbey,R.string.qaitbey_opening
-                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
+                ,R.string.qaitbey_number,R.string.qaitbey_address));
+        places.add(new Place(R.string.montazah,R.string.gardens,R.drawable.montazah
+                ,R.string.about_montazah,R.string.montazah_opening
+                ,R.string.montazah_number,R.string.montazah_address));
+        places.add(new Place(R.string.national_museum,R.string.museums,R.drawable.national_museum
+                ,R.string.about_national_museum,R.string.national_museum_opening
+                ,R.string.national_museum_number,R.string.national_museum_address));
         places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
                 ,R.string.about_qaitbey,R.string.qaitbey_opening
-                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
+                ,R.string.qaitbey_number,R.string.qaitbey_address));
+        places.add(new Place(R.string.montazah,R.string.gardens,R.drawable.montazah
+                ,R.string.about_montazah,R.string.montazah_opening
+                ,R.string.montazah_number,R.string.montazah_address));
+        places.add(new Place(R.string.national_museum,R.string.museums,R.drawable.national_museum
+                ,R.string.about_national_museum,R.string.national_museum_opening
+                ,R.string.national_museum_number,R.string.national_museum_address));
         places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
                 ,R.string.about_qaitbey,R.string.qaitbey_opening
-                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
-        places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening
-                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
-        places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening
-                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
-        places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening
-                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
-        places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening
-                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
-        places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening
-                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
-        places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening
-                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
-        places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening
-                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
-        places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening
-                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
-        places.add(new Place(R.string.qaitbey,R.string.historic,R.drawable.fort_qaitbey
-                ,R.string.about_qaitbey,R.string.qaitbey_opening
-                ,R.string.qaitbey_number,R.string.qaitbey_lat,R.string.qaitbey_long));
+                ,R.string.qaitbey_number,R.string.qaitbey_address));
 
         // Find the {@link RecyclerView} object in the view hierarchy of the {@link Activity}.
         RecyclerView recyclerView = rootView.findViewById(R.id.list);
@@ -86,11 +71,15 @@ public class PlacesFragment extends Fragment {
         // {@link RecycleView} will display list items for each {@link Place} in the list.
         recyclerView.setAdapter(adapter);
 
+        /* if you want to make a dividerline between each item in list use this :
+        but we are now using a cardview so we don't need that
+
         DividerItemDecoration mDividerItemDecoration = new DividerItemDecoration(
                 recyclerView.getContext(),
                 linearLayoutManager.getOrientation()
         );
         recyclerView.addItemDecoration(mDividerItemDecoration);
+        */
 
         adapter.setOnItemClickListener(new PlaceAdapter.OnItemClickListener() {
             @Override
@@ -105,5 +94,4 @@ public class PlacesFragment extends Fragment {
 
         return rootView;
     }
-
 }

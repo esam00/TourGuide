@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
     <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -7,10 +6,11 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         tools:context=".PlaceInfoActivity">
+
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appBar"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="@dimen/appBarLayout_height"
             android:fitsSystemWindows="true"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
@@ -20,10 +20,9 @@
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
                 app:contentScrim="@color/colorPrimary"
-                app:expandedTitleMarginEnd="64dp"
-                app:expandedTitleMarginStart="48dp"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed"
-                >
+                app:expandedTitleMarginEnd="@dimen/expanded_title_margin_end"
+                app:expandedTitleMarginStart="@dimen/expanded_title_margin_start"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
                 <ImageView
                     android:id="@+id/place_image"
@@ -46,17 +45,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <TextView
                     android:id="@+id/place_category"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:layout_margin="5dp"
+                    android:padding="@dimen/category_TextView_padding"
+                    android:layout_margin="@dimen/category_TextView_margin"
                     android:background="@color/colorAccent"
                     android:textAppearance="@android:style/TextAppearance.Small"
                     android:textColor="@android:color/white"
@@ -65,108 +67,104 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_margin="10dp"
                     android:background="@color/secondaryTextColor" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
-                    android:paddingBottom="16dp"
-                    android:paddingLeft="12dp"
+                    android:padding="@dimen/about_TextView_margin"
                     android:textAppearance="@android:style/TextAppearance.Medium"
                     android:textColor="@android:color/black"
                     android:textStyle="bold"
                     android:text="@string/about" />
 
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="4dp">
+
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="top"
-                    android:paddingLeft="12dp"
+                    android:padding="@dimen/description_textView_padding"
                     android:textAppearance="@android:style/TextAppearance.Small"
                     android:textColor="@android:color/black"
-                    tools:text="@string/about_qaitbey" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/secondaryTextColor" />
+                    />
+                </android.support.v7.widget.CardView>
 
                 <LinearLayout
+                    android:id="@+id/location"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="bottom"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingBottom="8dp"
-                    android:paddingLeft="12dp"
+                    android:padding="@dimen/information_linearLayout_padding"
+                    android:background="?android:attr/selectableItemBackground"
                     >
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="16dp"
+                        android:paddingEnd="@dimen/icon_padding_right"
                         android:src="@drawable/location_icon" />
 
                     <TextView
-                        android:id="@+id/location"
+                        android:id="@+id/loc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="20151648888433211"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="17sp"
-                        android:background="?android:attr/selectableItemBackground" />
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:textStyle="bold"
+                        android:autoLink="map"
+                         />
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_margin="10dp"
                     android:background="@color/secondaryTextColor" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="bottom"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingBottom="8dp"
-                    android:paddingLeft="12dp">
+                    android:padding="@dimen/information_linearLayout_padding">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="16dp"
+                        android:paddingEnd="@dimen/icon_padding_right"
                         android:src="@drawable/clock_icon" />
 
                     <TextView
                         android:id="@+id/opening_closing_time"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="17sp"
-                        tools:text="8:00 Am - 4:00 PM" />
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:textStyle="bold"                         />
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_margin="10dp"
                     android:background="@color/secondaryTextColor" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="bottom"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingBottom="8dp"
-                    android:paddingLeft="12dp">
+                    android:padding="@dimen/information_linearLayout_padding">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingRight="16dp"
+                        android:paddingEnd="@dimen/icon_padding_right"
                         android:src="@drawable/call_icon" />
 
                     <TextView
@@ -174,10 +172,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:autoLink="phone"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="17sp"
-                        tools:text="21478500" />
-                </LinearLayout>`
+                        android:textColor="@color/secondaryTextColor"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:textStyle="bold"/>
+                </LinearLayout>
             </LinearLayout>
 
         </android.support.v4.widget.NestedScrollView>

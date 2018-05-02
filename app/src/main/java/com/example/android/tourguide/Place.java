@@ -10,34 +10,39 @@ import android.util.Property;
 
 public class Place implements Parcelable{
     /**
-     * declaring int variables of the place details such as ( place name , place category , location
+     * declaring int variables to receive resource ids of the place details such as ( place name , place category , location
      * opening and closing time , phone number and short description of the place object
      */
     //place name
     private int  mPlaceNameResourceId ;
-    // category of place (historic , museums .. )
+    // place category (historic , museums .. )
     private int mPlaceCategoryResourceId;
+    //place photo
     private int mImageResourceId ;
+    //short description
     private int mDescriptionResourceId;
+    //opening and closing time
     private int mOpeningResourceId;
+    // phone number
     private int mPhoneNumberResourceId;
-    private int mLatitudeResourceId;
-    private int mLongitudeResourceId;
+    //location address
+    private int mAddressResourceId;
+
 
     /**
      * constructor
      */
     public Place(int placeName , int placeCategory, int imageResourceId,
             int descriptionResourceId, int openingResourceId ,int phoneNumberResourceId
-            ,int latitudeResourceId,int longitudeResourceId ){
+            ,int addressResourceId ){
        mPlaceNameResourceId = placeName;
        mPlaceCategoryResourceId = placeCategory;
        mImageResourceId = imageResourceId ;
        mDescriptionResourceId = descriptionResourceId;
        mOpeningResourceId = openingResourceId ;
        mPhoneNumberResourceId = phoneNumberResourceId;
-       mLatitudeResourceId = latitudeResourceId ;
-       mLongitudeResourceId =longitudeResourceId;
+       mAddressResourceId = addressResourceId ;
+
     }
 
     /**
@@ -61,13 +66,9 @@ public class Place implements Parcelable{
     public  int getImageResourceId(){
         return mImageResourceId;
     }
-    public  int getLatitudeResourceId(){
-        return mLatitudeResourceId;
+    public  int getAddressResourceId(){
+        return mAddressResourceId;
     }
-    public  int getLongitudeResourceId(){
-        return mLongitudeResourceId;
-    }
-
 
     //write object values to parcel for storage
     public void writeToParcel(Parcel dest, int flags){
@@ -78,8 +79,8 @@ public class Place implements Parcelable{
         dest.writeInt(mDescriptionResourceId);
         dest.writeInt(mOpeningResourceId);
         dest.writeInt(mPhoneNumberResourceId);
-        dest.writeInt(mLatitudeResourceId);
-        dest.writeInt(mLongitudeResourceId);
+        dest.writeInt(mAddressResourceId);
+
     }
 
     //constructor used for parcel
@@ -91,8 +92,8 @@ public class Place implements Parcelable{
         mDescriptionResourceId = parcel.readInt();
         mOpeningResourceId = parcel.readInt();
         mPhoneNumberResourceId = parcel.readInt();
-        mLatitudeResourceId = parcel.readInt();
-        mLongitudeResourceId = parcel.readInt();
+        mAddressResourceId = parcel.readInt();
+
     }
 
     //creator - used when un-parceling our parcle (creating the object)

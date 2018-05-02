@@ -1,19 +1,22 @@
 <resources>
-    <string name="app_name">TourGuide</string>
+    <string name="app_name">Alex TourGuide</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
-    <!--  main Categories  -->
+    <!--  main Categories - fragments -->
     <string name="places">Places</string>
     <string name="restaurants">Restaurants</string>
     <string name="hotels">Hotels</string>
 
-    <!-- Places -->
+    <!-- Places names -->
     <string name="qaitbey">Fort Qaitbey</string>
+    <string name="montazah">Montazah Palace Gardens</string>
+    <string name="national_museum">Alex National Museum </string>
+    <string name="roberto_restaurant">Roberto italian Restaurants</string>
 
     <!-- category -->
     <string name="historic">#Historic Sites</string>
+    <string name="gardens">#Gardens-parks</string>
+    <string name="museums">#History Museum</string>
+    <string name="italian">#Italian,Vegetarian,Vegan Options</string>
 
     <!-- short description about places  -->
     <string name="about_qaitbey">The Qaitbay Citadel in Alexandria is considered one of the most
@@ -24,39 +27,56 @@
         important defensive strongholds, not only in Egypt, but also along the Mediterranean Sea
         coast. It formulated an important part of the fortification system of Alexandria in the
         15th century
-    The Qaitbay Citadel in Alexandria is considered one of the most
+        The Qaitbay Citadel in Alexandria is considered one of the most
+        The Qaitbay Citadel in Alexandria is considered one of the most
         important defensive strongholds, not only in Egypt, but also along the Mediterranean Sea
         coast. It formulated an important part of the fortification system of Alexandria in the
         15th century
-    The Qaitbay Citadel in Alexandria is considered one of the most
-        important defensive strongholds, not only in Egypt, but also along the Mediterranean Sea
-        coast. It formulated an important part of the fortification system of Alexandria in the
-        15th century
-    The Qaitbay Citadel in Alexandria is considered one of the most
-        important defensive strongholds, not only in Egypt, but also along the Mediterranean Sea
-        coast. It formulated an important part of the fortification system of Alexandria in the
-        15th century
-    The Qaitbay Citadel in Alexandria is considered one of the most
-        important defensive strongholds, not only in Egypt, but also along the Mediterranean Sea
-        coast. It formulated an important part of the fortification system of Alexandria in the
-        15th century
-    The Qaitbay Citadel in Alexandria is considered one of the most
-        important defensive strongholds, not only in Egypt, but also along the Mediterranean Sea
-        coast. It formulated an important part of the fortification system of Alexandria in the
-        15th century</string>
+        The Qaitbay Citadel in Alexandria is considered one of the most
+    </string>
+    <string name="about_montazah">Montaza Palace  is a palace, museum and
+        extensive gardens in the Montaza district of Alexandria, Egypt. It was built on a low
+        plateau east of central Alexandria overlooking a beach on the Mediterranean Sea.
+    The extensive Montaza Palace grounds first had the Salamlek Palace, built in 1892 by Khedive
+        Abbas II, the last Muhammad Ali Dynasty ruler to hold the Khedive title over the Khedivate
+        of Egypt and Sudan. It was used as a hunting lodge and residence for his companion.
+The larger Al-Haramlik Palace and royal gardens were added to the Montaza Palace grounds, being
+        built by King Fuad I in 1932, as a summer palace. It is in a mixture of Ottoman and Florentine
+        styles, with two towers. One of these towers rises distinctively high above with elaborated
+        Italian Renaissance design details. The palace has long open arcades facing the sea
+        along each floor.</string>
+    <string name="about_national_museum">The Alexandria National Museum (ANM) is a museum in
+        Alexandria, Egypt. It was inaugurated the 31 December 2003[1] by Hosni Mubarak and it is
+        located in a renovated Italian style palace in Tariq Al-Horreya Street (former Rue Fouad)
+        The building used to be home to the United States consulate.
+    The Alexandria National Museum contains around 1,800 artifacts that narrate the story of
+        Alexandria and Egypt. Most of these pieces came from other Egyptian museums. The museum
+        mainly focuses on three collections: Ancient Egyptian, Coptic, and the Muslim world.
+        The museum also includes works from the Hellenistic period, including pieces from Heraklion
+        and Canopus. Objects include canopic jars, Mashrabiya, and pieces from the rule of Nectanebo
+        II. The city of Alexandria is also included in the collection, including objects from the
+        20th century.</string>
+    <string name="about_italian_restuarant">nothing to show </string>
 
     <!-- opening and closing time   -->
     <string name="qaitbey_opening">8:00 Am - 4:00 pm </string>
+    <string name="montazah_opening">24 hours </string>
+    <string name="national_museum_opening">9:00 Am - 5:00 pm </string>
+    <string name="italian_restaurant_opening"> 5:00 PM - 12:00 AM</string>
 
     <!-- Phone Numbers    -->
     <string name="qaitbey_number">+20 122 244 5141 </string>
+    <string name="montazah_number">+20 102 547 5478</string>
+    <string name="national_museum_number">+20 3 4835519</string>
+    <string name="italian_restuarant_number">+20 3 4209120</string>
 
     <!-- locations -->
-    <string name="qaitbey_lat">31.214011</string>
-    <string name="qaitbey_long">29.885638</string>
-
-
+    <string name="qaitbey_address">Qaitbay,Alexandria,Egypt</string>
+    <string name="montazah_address">Montazah,Palace,Alexandria,Egypt</string>
+    <string name="national_museum_address">national,museum,Alexandria,Egypt</string>
+    <string name="italian_restaurant_address">Robertos,Italian,Restaurant,Alexandria,Egypt</string>
 
     <string name="about">About</string>
+
 
 </resources>
