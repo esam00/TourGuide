@@ -38,14 +38,17 @@ public class FragmentAdapter extends FragmentPagerAdapter {
             return new PlacesFragment();
         } else if (position == 1){
             return new RestaurantsFragment();
-        }else {
+        }else if(position==2){
             return new HotelsFragment();
+        }else {
+            return new EventsFragment();
+
         }
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 
     @Override
@@ -55,8 +58,11 @@ public class FragmentAdapter extends FragmentPagerAdapter {
             return mContext.getString(R.string.places);
         } else if (position == 1) {
             return mContext.getString(R.string.restaurants);
-        } else {
+        } else if (position==2) {
             return mContext.getString(R.string.hotels);
+        }else {
+            return mContext.getString(R.string.events);
+
         }
     }
 }

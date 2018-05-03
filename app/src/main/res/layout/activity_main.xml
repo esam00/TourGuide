@@ -47,6 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:elevation="6dp"
+            app:tabMode="scrollable"
             android:background="@color/colorPrimary"
             app:tabIndicatorColor="@android:color/white"
             android:minHeight="?attr/android:actionBarSize"

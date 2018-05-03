@@ -5,6 +5,7 @@
     <string name="places">Places</string>
     <string name="restaurants">Restaurants</string>
     <string name="hotels">Hotels</string>
+    <string name="events">Events</string>
 
     <!-- Places names -->
     <string name="qaitbey">Fort Qaitbey</string>
